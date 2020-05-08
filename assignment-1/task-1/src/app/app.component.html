@@ -1,0 +1,17 @@
+<div class="formDiv">
+  <h2>Login</h2>
+  <h3 *ngIf="sucessfullLogin">Successfully Logged In</h3>
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput type="username" placeholder="username" [(ngModel)]="username">
+  </mat-form-field>
+  <p *ngIf="usernameRequired">please enter username</p>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" placeholder="password" [(ngModel)]="password">
+  </mat-form-field>
+  <p *ngIf="passwordRequired">please enter password</p>
+
+  <button mat-flat-button color='primary' (click)="login()">Login</button>
+</div>
